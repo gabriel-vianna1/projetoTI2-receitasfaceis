@@ -1,3 +1,19 @@
+:root{
+    --main-color: #98D89E;
+    --secondary-color: #69b589;
+    --tercery-color: #FFAD60;
+    --tertiary-color: #F3E5AB;
+    --font-color: #FFFFFF;
+    --background-color: #E2E2E2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
 html {
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
@@ -5,7 +21,7 @@ html {
 }
 
 body {
-    background-color: #e8c98d;
+    background-color: var(--background-color);
 }
 
 .main-content {
@@ -14,64 +30,161 @@ body {
 
 .header{
     width: 100%;
-    background-color: #f9b83a;
+    background-color: var(--main-color);
     z-index: 1000;
     padding: 20px;
     display: flex;
     position: relative;
     align-items: center;
     justify-content: space-between;
-}
+    .left{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        .img-logo {
+            img{
+                width: 80px;
+                height: auto;
+                display: block;
+            }
+        }
+        .links{
+            margin-left: 2rem;
+            display: flex;
+            gap: 10px;
+            a{
+                display: inline-block;
+                padding: 10px 20px;
+                margin: 10px;
+                background-color: var(--secondary-color);
+                color: #fff;
+                border: none;
+                border-radius: 20px;
+                font-size: 16px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                text-decoration: none;
+                &:hover{
+                   opacity: 0.6;
+                }
+            }
+        }
+    }
+    .right{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        .links{
+            margin-left: 2rem;
+            display: flex;
+            gap: 10px;
+            a{
+                display: inline-block;
+                padding: 10px 20px;
+                margin: 10px;
+                background-color: var(--secondary-color);
+                color: #fff;
+                border: none;
+                border-radius: 20px;
+                font-size: 16px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                text-decoration: none;
+                &:hover{
+                   opacity: 0.6;
+                }
+            }
 
-.img-logo {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+        }    
+    }
 }
-
-.img-logo img{
-    width: 100%;
-    max-width: 200px;
-    height: auto;
-    display: block;
-}
-
-.img-logo img:hover {
-    transform: scale(1.2);
-}
-
-.links {
-    display: flex;
+.container{
+    display: grid;
+    grid-template-columns: 300px 1fr;
     gap: 10px;
+    margin-top: 20px;
+    h1{
+        background-color: var(--main-color);
+        border-radius: 15px;
+        text-align: center;
+        padding: 0.5rem;
+        color: var(--font-color);
+    }
+    .sugestoes{
+        grid-row: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        .caixa-receita {
+            border: 2px solid var(--secondary-color);
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform .3s ease;
+            text-decoration: none;
+            height: 100%;
+            &:hover {
+                transform: scale(1.12);
+            }
+            .nome-receita {
+                background-color: var(--main-color);
+                padding: 5px;  
+                color: white;
+                text-align: center;
+                font-size: 18px;
+            }
+            .imagem-receita {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 15px 15px 0 0;
+                padding: 3px 3px 0 3px;
+            }
+        }
+    }
 }
-
-div.links {
-    display: flex;
-    gap: 10px;
-}
-
-div.links a {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 10px;
-    background-color: #D49927;
+.footer{
+    margin-top: 50px;
+    background-color: var(--secondary-color);
     color: #fff;
-    border: none;
-    border-radius: 20px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    .container-footer{
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        p{
+            margin: 5px 0;
+            a{
+                
+                text-decoration: none;
+                transition: color 0.3s ease;
+                &:hover{
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
 }
 
-div.links a:hover {
-    transform: scale(1.12);
-}
 
-.header a {
-    text-decoration: none;
-    color: #333;
-    font-size: 20px;
-}
+
+
+
+
+
+
+
+
+
+
 
 .dropvdown {
     position: relative;
@@ -87,43 +200,13 @@ div.links a:hover {
     object-fit: cover;
 }
 
-.container{
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    gap: 10px;
-    margin-top: 20px;
-}
 
-.container .sugestoes{
-    grid-row: 2;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
 
-.caixa-receita {
-    border: 2px solid #d5741a;
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    cursor: pointer;
-    transition: transform .3s ease;
-    text-decoration: none;
-    height: 100%;
-}
 
-.caixa-receita:hover {
-    transform: scale(1.12);
-}
 
-.imagem-receita {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 15px 15px 0 0;
-    padding: 3px 3px 0 3px;
-}
+
+
+
 
 #receitas {
     display: grid;
@@ -132,13 +215,7 @@ div.links a:hover {
     padding: 0 24px 24px 24px;
 }
 
-.nome-receita {
-    background-color: #d5741a;
-    padding: 5px;  
-    color: white;
-    text-align: center;
-    font-size: 18px;
-}
+
 .container .carousel-sugestoes{
     grid-row: 2;
 }
@@ -150,11 +227,6 @@ div.links a:hover {
     border-radius: 20px;
 }
 
-.container h1{
-    background-color: #F9B83A;
-    border-radius: 15px;
-    text-align: center;
-}
 
 .carousel-inner{
     text-align: right;
@@ -246,36 +318,8 @@ div.links a:hover {
     background-color: #F9B83A;
 }
 
-footer {
-    margin-top: 50px;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
 
-.footer .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
 
-.footer p {
-    margin: 5px 0;
-}
-
-.footer a {
-    color: #D49927;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.footer a:hover {
-    color: #F9B83A;
-}
 
 @media  (max-width: 1370px) {
     .header {
