@@ -1,4 +1,4 @@
-package main.java.model;
+package model;
 
 public class Usuario {
 	private int id;
@@ -44,11 +44,11 @@ public class Usuario {
 		this.senha = senha;
 	}
 
-	public char getEmail() {
+	public String getEmail() {
 		return email;
 	}
 
-	public void setEmail(char email) {
+	public void setEmail(String email) {
 		this.email = email;
 	}
 
