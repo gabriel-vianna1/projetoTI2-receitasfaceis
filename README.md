@@ -1,34 +1,25 @@
-Projeto Receitas Fáceis
-Descrição
-Este é um projeto web desenvolvido com HTML, CSS e JavaScript para a interface front-end, e Java com o framework Spark para a camada back-end. O sistema acessa um banco de dados hospedado no Microsoft Azure para armazenar e gerenciar informações de receitas.
+# Projeto Receitas Fáceis
 
-Além disso, o projeto conta com uma funcionalidade inovadora que utiliza a API de inteligência artificial da Microsoft Azure para identificar ingredientes a partir de uma foto enviada pelo usuário.
+## Descrição
 
-O desenvolvimento foi realizado por um grupo de 4 pessoas durante uma disciplina da faculdade, com foco em integrar tecnologias web e inteligência artificial para facilitar o preparo de receitas.
+Projeto web desenvolvido com HTML, CSS e JavaScript no front-end, e Java com o framework Spark no back-end para acesso a banco de dados.
 
-Tecnologias Utilizadas
-Front-end: HTML, CSS, JavaScript
+O banco de dados está hospedado no Microsoft Azure, garantindo escalabilidade e segurança.
 
-Back-end: Java, Spark Framework
+O projeto inclui uma funcionalidade que utiliza a API de inteligência artificial do Microsoft Azure para identificar ingredientes a partir de fotos enviadas pelos usuários.
 
-Banco de Dados: Microsoft Azure SQL Database
+Desenvolvido durante uma disciplina da faculdade por um grupo de 4 pessoas.
 
-Serviços de IA: API de Reconhecimento de Imagens do Microsoft Azure
+## Tecnologias Utilizadas
 
-Funcionalidades Principais
-Cadastro, consulta e gerenciamento de receitas via interface web
+- HTML, CSS, JavaScript  
+- Java  
+- Spark Framework  
+- Banco de Dados Microsoft Azure  
+- API de IA do Microsoft Azure  
 
-Upload de fotos para identificação automática de ingredientes usando IA
+## Funcionalidades
 
-Integração completa entre front-end, back-end e banco de dados em nuvem
-
-Como Executar
-Clone o repositório
-
-Configure as variáveis de ambiente para conexão com o banco no Azure
-
-Configure as credenciais da API da IA do Azure
-
-Execute a aplicação Java com Spark
-
-Acesse a interface web pelo navegador no endereço configurado
+- Cadastro, consulta e gerenciamento de receitas via interface web  
+- Identificação automática de ingredientes por foto usando IA  
+- Integração front-end, back-end e banco de dados na nuvem  
